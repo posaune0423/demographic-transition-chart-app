@@ -1,12 +1,14 @@
 import { makeStyles } from '@mui/styles';
 
 export const useStyles = makeStyles(() => ({
-  container: {
-    padding: '0 2rem',
-    color: '#efefef',
-    backgroundColor: '#0A1929'
-  },
   main: {
+    padding: '0 2rem',
+    color: 'inherit',
+    backgroundColor: 'inherit',
+    marginTop: '60px',
+    marginBottom: '90px'
+  },
+  container: {
     minHeight: '100vh',
     padding: '4rem 0',
     flex: 1,
@@ -21,7 +23,7 @@ export const useStyles = makeStyles(() => ({
     fontSize: '4rem',
     textAlign: 'center',
     '& a': {
-      color: '#fa7a18',
+      color: '#0070f3',
       textDecoration: 'none',
       '&:hover': { textDecoration: 'underline' },
       '&:focus': { textDecoration: 'underline' },
@@ -35,7 +37,7 @@ export const useStyles = makeStyles(() => ({
     textAlign: 'center'
   },
   code: {
-    background: '#050505',
+    background: '#fafafa',
     borderRadius: '5px',
     padding: '0.75rem',
     fontSize: '1.1rem',
@@ -62,16 +64,16 @@ export const useStyles = makeStyles(() => ({
     '& h2': { margin: '0 0 1rem 0', fontSize: '1.5rem' },
     '& p': { margin: '0', fontSize: '1.25rem', lineHeight: 1.5 },
     '&:hover': {
-      color: '#fa7a18',
-      borderColor: '#fa7a18'
+      color: '#0070f3',
+      borderColor: '#0070f3'
     },
     '&:focus': {
-      color: '#fa7a18',
-      borderColor: '#fa7a18'
+      color: '#0070f3',
+      borderColor: '#0070f3'
     },
     '&:active': {
-      color: '#fa7a18',
-      borderColor: '#fa7a18'
+      color: '#0070f3',
+      borderColor: '#0070f3'
     }
   },
   logo: { height: '1em', marginLeft: '0.5rem' }

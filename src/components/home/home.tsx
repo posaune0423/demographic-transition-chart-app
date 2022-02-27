@@ -4,8 +4,8 @@ import { useStyles } from './home.style';
 export const Home: FunctionComponent = () => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
-      <main className={classes.main}>
+    <main className={classes.container}>
+      <div className={classes.main}>
         <h1 className={classes.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -44,7 +44,7 @@ export const Home: FunctionComponent = () => {
             </p>
           </a>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
