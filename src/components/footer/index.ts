@@ -1,1 +1,1 @@
-export * from './footer.container'
+export * from './footer.container';

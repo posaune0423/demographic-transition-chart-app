@@ -1,11 +1,10 @@
-import { Theme } from '@mui/material'
-import { makeStyles } from '@mui/styles'
+import { makeStyles } from '@mui/styles';
 
-export const useStyles = makeStyles((theme: Theme) => ({
+export const useStyles = makeStyles(() => ({
   container: {
     padding: '0 2rem',
-    color: theme.palette.mode === 'dark' ? '#efefef' : 'inherit',
-    backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'inherit',
+    color: '#efefef',
+    backgroundColor: '#0A1929'
   },
   main: {
     minHeight: '100vh',
@@ -14,7 +13,7 @@ export const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   title: {
     margin: '0',
@@ -22,33 +21,33 @@ export const useStyles = makeStyles((theme: Theme) => ({
     fontSize: '4rem',
     textAlign: 'center',
     '& a': {
-      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
+      color: '#fa7a18',
       textDecoration: 'none',
       '&:hover': { textDecoration: 'underline' },
       '&:focus': { textDecoration: 'underline' },
-      '&:active': { textDecoration: 'underline' },
-    },
+      '&:active': { textDecoration: 'underline' }
+    }
   },
   description: {
     margin: '4rem 0',
     lineHeight: 1.5,
     fontSize: '1.5rem',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   code: {
-    background: theme.palette.mode === 'dark' ? '#050505' : '#fafafa',
+    background: '#050505',
     borderRadius: '5px',
     padding: '0.75rem',
     fontSize: '1.1rem',
     fontFamily:
-      'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,\n    Bitstream Vera Sans Mono, Courier New, monospace',
+      'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,\n    Bitstream Vera Sans Mono, Courier New, monospace'
   },
   grid: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexWrap: 'wrap',
-    maxWidth: '800px',
+    maxWidth: '800px'
   },
   card: {
     margin: '1rem',
@@ -63,17 +62,17 @@ export const useStyles = makeStyles((theme: Theme) => ({
     '& h2': { margin: '0 0 1rem 0', fontSize: '1.5rem' },
     '& p': { margin: '0', fontSize: '1.25rem', lineHeight: 1.5 },
     '&:hover': {
-      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
-      borderColor: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
+      color: '#fa7a18',
+      borderColor: '#fa7a18'
     },
     '&:focus': {
-      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
-      borderColor: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
+      color: '#fa7a18',
+      borderColor: '#fa7a18'
     },
     '&:active': {
-      color: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
-      borderColor: theme.palette.mode === 'dark' ? '#fa7a18' : '#0070f3',
-    },
+      color: '#fa7a18',
+      borderColor: '#fa7a18'
+    }
   },
-  logo: { height: '1em', marginLeft: '0.5rem' },
-}))
+  logo: { height: '1em', marginLeft: '0.5rem' }
+}));
