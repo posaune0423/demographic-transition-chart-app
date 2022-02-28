@@ -1,5 +1,5 @@
 module.exports = {
-  // testEnvironment: 'jsdom',
+  testEnvironment: 'jsdom',
   preset: 'ts-jest',
   globals: {
     'ts-jest': {

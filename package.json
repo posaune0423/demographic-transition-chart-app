@@ -6,8 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
-    "test:coverage": "jest --collect-coverage"
+    "test": "jest --config jest.config.js --verbose --no-cache",
+    "test:coverage": "jest --collect-coverage",
+    "ci": "yarn lint && yarn test"
   },
   "dependencies": {
     "@mui/styles": "^5.2.2",
