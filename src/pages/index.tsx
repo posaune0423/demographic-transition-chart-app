@@ -1,13 +1,13 @@
-import { NextPage } from 'next'
-import { Home } from '../components/home'
-import { Layout } from '../layouts'
+import { NextPage } from 'next';
+import { Layout } from '../layouts';
+import { Home } from 'components/home';
 
 const Page: NextPage = () => {
   return (
     <Layout>
       <Home />
     </Layout>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
