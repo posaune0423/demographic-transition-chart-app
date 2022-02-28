@@ -9,10 +9,10 @@ export const useStyles = makeStyles(() => ({
     alignItems: 'center',
     display: 'flex',
     backgroundColor: '#fafafa',
-    paddingLeft: '2rem',
-    color: '#424242',
+    paddingLeft: '2rem'
   },
   title: {
-    fontSize: '20px'
+    margin: '0 auto',
+    color: '#424242'
   }
 }));
