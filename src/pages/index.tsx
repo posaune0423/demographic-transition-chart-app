@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
-import { Home } from '../components/home';
 import { Layout } from '../layouts';
+import { Home } from 'components/home';
 
 const Page: NextPage = () => {
   return (
