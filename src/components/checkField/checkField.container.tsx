@@ -2,11 +2,7 @@ import { FunctionComponent } from 'react';
 import { CheckField as CheckFieldComponent } from './checkField';
 
 type Props = {
-  prefectures:
-    | {
-        prefCode: number;
-        prefName: string;
-      }[];
+  prefectures: { prefCode: number; prefName: string }[];
   onChange: (name: string, prefName: number, check: boolean) => void;
 };
 
