@@ -16,7 +16,7 @@ First, you have to get RESAS API key. if you are not familier with RESAS API, ju
 create `.env.local` by running below
 
 ```bash
-cp -pr .env.local.sample .env.local
+cp -pr .env.sample .env.local
 ```
 
 then copy these api key values and paste them in `.env.local`
