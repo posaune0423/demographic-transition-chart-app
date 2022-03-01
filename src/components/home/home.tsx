@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { useStyles } from './home.style';
-import { CheckField } from 'components/checkField';
-import { Chart } from 'components/chart';
+import { CheckField } from '../checkField';
+import { Chart } from '../chart';
 
 type Props = {
   prefectures: { prefCode: number; prefName: string }[] | null;

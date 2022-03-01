@@ -30,7 +30,7 @@ export const Chart: FunctionComponent<Props> = ({ populationData }) => {
 
   const options: Options = {
     title: {
-      text: '総人口推移'
+      text: '都道府県別人口推移'
     },
     credits: {
       enabled: false
