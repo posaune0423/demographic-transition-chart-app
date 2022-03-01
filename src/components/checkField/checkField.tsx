@@ -29,7 +29,7 @@ export const CheckField: FunctionComponent<Props> = ({
           />
           <label htmlFor={'checkbox' + prefecture.prefCode}>
             {prefecture.prefName.length === 3
-              ? '　' + prefecture.prefName
+              ? prefecture.prefName + '　'
               : prefecture.prefName}
           </label>
         </div>

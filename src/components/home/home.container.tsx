@@ -1,5 +1,5 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import axios from 'axios';
+import { API } from '../../common/api';
 import { Home as HomeComponent } from './home';
 
 export const Home: FunctionComponent = () => {
@@ -7,24 +7,57 @@ export const Home: FunctionComponent = () => {
     { prefCode: number; prefName: string }[] | null
   >(null);
 
+  const [population, setPopulation] = useState<
+    { prefName: string; data: { year: number; value: number }[] }[]
+  >([]);
+
   useEffect(() => {
     // fetch prefectures list
-    axios
-      .get('https://opendata.resas-portal.go.jp/api/v1/prefectures', {
-        headers: { 'X-API-KEY': process.env.NEXT_PUBLIC_API_KEY! }
-      })
+    API.getPrefectures()
       .then((res) => {
         setPreFectures(res.data.result);
       })
       .catch((error) => console.error(error));
   }, []);
 
-  const handleClickCheck = () => {
-    // TODO: need to implement!
-    console.log('handle click check');
+  const handleClickCheck = (
+    prefName: string,
+    prefCode: number,
+    check: boolean
+  ) => {
+    const checkedPopulation = population.slice();
+
+    // when checked
+    if (check) {
+      if (checkedPopulation.findIndex((value) => value.prefName === prefName) !== -1)
+        return;
+
+      API.getPopulations(prefCode)
+        .then((res) => {
+          checkedPopulation.push({
+            prefName: prefName,
+            data: res.data.result.data[0].data
+          });
+          setPopulation(checkedPopulation);
+        })
+        .catch((error) => console.error(error));
+    }
+    // when unchecked
+    else {
+      const deleteIndex = checkedPopulation.findIndex(
+        (value) => value.prefName === prefName
+      );
+      if (deleteIndex === -1) return;
+      checkedPopulation.splice(deleteIndex, 1);
+      setPopulation(checkedPopulation);
+    }
   };
 
   return (
-    <HomeComponent prefectures={prefectures} onChange={handleClickCheck} />
+    <HomeComponent
+      prefectures={prefectures}
+      population={population}
+      onChange={handleClickCheck}
+    />
   );
 };
