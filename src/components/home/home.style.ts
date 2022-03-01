@@ -7,4 +7,7 @@ export const useStyles = makeStyles(() => ({
     paddingTop: '80px',
     paddingBottom: '110px'
   },
+  title: {
+    paddingLeft: '1rem'
+  }
 }));
