@@ -603,7 +603,7 @@
     "@mui/utils" "^5.4.2"
     prop-types "^15.7.2"
 
-"@mui/styles@^5.2.2":
+"@mui/styles@^5.4.2":
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/@mui/styles/-/styles-5.4.2.tgz#e0dadfc5de8255605f23c2f909f3669f0911bb88"
   integrity sha512-BX75fNHmRF51yove9dBkH28gpSFjClOPDEnUwLTghPYN913OsqViS/iuCd61dxzygtEEmmeYuWfQjxu/F6vF5g==
