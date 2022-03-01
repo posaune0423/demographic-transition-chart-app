@@ -29,7 +29,10 @@ export const Home: FunctionComponent = () => {
 
     // when checked
     if (check) {
-      if (checkedPopulation.findIndex((value) => value.prefName === prefName) !== -1)
+      if (
+        checkedPopulation.findIndex((value) => value.prefName === prefName) !==
+        -1
+      )
         return;
 
       API.getPopulations(prefCode)
