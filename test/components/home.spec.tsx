@@ -1,5 +1,5 @@
 import { Home } from '../../src/components/home';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { API } from '../../src/common/api';
 import { TEST_PREFECTURES_DATA } from '../utils/const';
 
@@ -12,8 +12,11 @@ const mockGetPrefectures = jest
 // });
 
 describe('Home Component', () => {
-  test('should render correctly', () => {
+  test('should render correctly', async () => {
     render(<Home />);
-    expect(mockGetPrefectures).toBeCalled();
+
+    await waitFor(() => {
+      expect(mockGetPrefectures).toBeCalled();
+    });
   });
 });
